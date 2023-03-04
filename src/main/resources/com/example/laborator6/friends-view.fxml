@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane id="backgroundBorderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="766.0" style="-fx-background-color: #DFBCB2;" stylesheets="@../../../css/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laborator6.FriendsController">
+   <center>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="766.0" spacing="2.0" translateY="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="763.0" style="-fx-background-color: #E48716;" text="Friends" textFill="#f4efe9">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="friendsTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onDoubleClick" prefHeight="480.0" prefWidth="763.0" style="-fx-background-color: #E48716;" translateY="5.0">
+              <columns>
+                <TableColumn fx:id="firstName" prefWidth="75.0" text="FirstName" />
+                <TableColumn fx:id="lastName" prefWidth="75.0" text="LastName" />
+                  <TableColumn fx:id="friendsFrom" prefWidth="75.0" text="FriendsFrom" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <padding>
+                  <Insets top="-5.0" />
+               </padding>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="768.0" spacing="25.0" style="-fx-alignment: center;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="profilePhoto" fitHeight="97.0" fitWidth="104.0" onMouseClicked="#onProfilePhotoClicked" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../images/avatar.jpg" />
+               </image>
+            </ImageView>
+            <Text fx:id="username" fill="#1e1e1e" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Text>
+            <Button fx:id="backButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBackButtonClicked" prefHeight="32.0" prefWidth="180.0" style="-fx-background-color: #E48716; -fx-background-radius: 100px; -fx-border-radius: 100px;" text="Sign Out" textFill="#f4efe9">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <bottom>
+      <GridPane prefHeight="48.0" prefWidth="766.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="addFriendButton" mnemonicParsing="false" onAction="#onAddFriendButtonClicked" prefHeight="30.0" prefWidth="169.0" style="-fx-background-color: #E48716; -fx-background-radius: 100px; -fx-border-radius: 100px;" text="Add Friend" textFill="#f4efe9" GridPane.halignment="CENTER" />
+            <Button fx:id="deleteFriendButton" mnemonicParsing="false" onAction="#onDeleteFriendButtonClicked" prefHeight="27.0" prefWidth="180.0" style="-fx-background-color: #E48716; -fx-background-radius: 100px; -fx-border-radius: 100px;" text="Delete Friend" textFill="#f4efe9" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Button fx:id="friendRequestsButton" mnemonicParsing="false" onAction="#onFriendRequestsButtonClicked" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: #E48716; -fx-background-radius: 100px; -fx-border-radius: 100px;" text="Friend Requests" textFill="#f4efe9" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>

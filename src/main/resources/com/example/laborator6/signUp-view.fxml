@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane id="backgroundSignUp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="811.0" style="-fx-background-color: #000000;" stylesheets="@../../../css/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laborator6.SignUpController">
+   <bottom>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="810.0" style="-fx-background-color: #d86e39;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="111.0" layoutY="120.0" prefHeight="246.0" prefWidth="558.0" style="-fx-background-color: #F08000;">
+               <children>
+                  <GridPane fx:id="signUpInformation" layoutX="101.0" layoutY="33.0" prefHeight="185.0" prefWidth="362.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.79998779296875" minWidth="10.0" prefWidth="64.79998779296875" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.00001220703126" minWidth="10.0" prefWidth="160.00001220703126" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="53.999993896484376" minHeight="10.0" prefHeight="52.39998779296875" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="78.40000610351562" minHeight="10.0" prefHeight="43.19999389648437" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="35.999990844726554" minHeight="0.0" prefHeight="28.000006103515616" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="121.0" text="First Name" textFill="#f4efe9">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" prefWidth="184.0" promptText="First Name" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="1" />
+                        <Label prefHeight="37.0" prefWidth="118.0" text="Last Name" textFill="#f4efe9" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" prefWidth="184.0" promptText="Last Name" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label prefHeight="47.0" prefWidth="62.0" text="Email" textFill="#f4efe9" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" prefWidth="184.0" promptText="Email" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label prefHeight="43.0" prefWidth="100.0" text="Password" textFill="#f4efe9" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <PasswordField minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" prefWidth="184.0" promptText="Password" style="-fx-background-color: #FFFFFF;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+            <Button fx:id="createUserButton" layoutX="266.0" layoutY="445.0" mnemonicParsing="false" onAction="#onCreateUserButtonClicked" prefHeight="34.0" prefWidth="249.0" style="-fx-background-color: #F08000; -fx-background-radius: 100px; -fx-border-radius: 100px;" text="Create User" textFill="#f4efe9">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+            <Text fx:id="textResponse" fill="#fafafa" layoutX="209.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: impact;" text="The email address corresponds to another account" wrappingWidth="392.5367431640625">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="backButton" layoutX="266.0" layoutY="500.0" mnemonicParsing="false" onAction="#onBackButtonClicked" prefHeight="34.0" prefWidth="249.0" style="-fx-background-color: #F08000; -fx-background-radius: 100px; -fx-border-radius: 100px;" text="Back" textFill="#f4efe9">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

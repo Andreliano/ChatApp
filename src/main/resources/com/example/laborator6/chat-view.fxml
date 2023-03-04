@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="810.0" style="-fx-background-color: #d86e39;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laborator6.ChatController">
+   <top>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="98.0" prefWidth="666.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="99.0" fitWidth="102.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../images/avatar.jpg" />
+               </image>
+               <HBox.margin>
+                  <Insets left="240.0" />
+               </HBox.margin>
+            </ImageView>
+            <VBox fx:id="texts" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="74.0" prefWidth="140.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" translateY="25.0" wrappingWidth="265.7680130004883">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets left="10.0" top="15.0" />
+               </padding>
+            </VBox>
+            <Button fx:id="exitButton" minWidth="52.0" mnemonicParsing="false" onAction="#onExitButtonClicked" prefHeight="46.0" prefWidth="54.0" style="-fx-background-color: #E48716;" text="X" textFill="#cf0f0f" translateX="80.0">
+               <HBox.margin>
+                  <Insets left="122.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <TextField id="rightArrow" fx:id="messageBar" onAction="#getMessage" style="-fx-background-color: #513C2F; -fx-text-fill: white;" stylesheets="@../../../css/messageBar.css" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <ScrollPane fx:id="scrollPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="810.0" style="-fx-background-color: #FFFFFF;" translateY="20.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="34.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+         <content>
+            <VBox fx:id="boxOfMessages" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="598.0" spacing="10.0" />
+         </content>
+      </ScrollPane>
+   </left>
+</BorderPane>

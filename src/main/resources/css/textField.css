@@ -1,0 +1,6 @@
+#textField {
+    -fx-background-image:url('../images/icon.jpg');
+    -fx-background-size: 24px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left center;
+}

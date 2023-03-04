@@ -1,0 +1,70 @@
+/*#backgroundBorderPane{*/
+/*    -fx-background-image:url('../images/windowBackground.jpg');*/
+/*    -fx-background-size: 100% 100%;*/
+/*    -fx-background-repeat: no-repeat;*/
+/*}*/
+
+/*#backgroundSignUp{*/
+/*    -fx-background-image:url('../images/logInBackground.jpg');*/
+/*    -fx-background-size: 100% 100%;*/
+/*    -fx-background-repeat: no-repeat;*/
+/*}*/
+
+/*#backgroundRequestsSent{*/
+/*    -fx-background-image: url('../images/requestsSentBackground.jpg');*/
+/*    -fx-background-size: 100% 100%;*/
+/*    -fx-background-repeat: no-repeat;*/
+/*}*/
+
+.table-row-cell:selected {
+    -fx-background-color: #513C2F ;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: #f4efe9;
+}
+
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#000000 0%, #000000 100%);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: #012E4A;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color,  #E48716;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+
+.list-cell {
+    -fx-alignment: center;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color:  #513C2F;
+    -fx-text-fill: white;
+}
+
+.list-cell{
+    -fx-background-color:  #E48716;
+}
