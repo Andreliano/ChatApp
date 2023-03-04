@@ -70,7 +70,7 @@ public class LogInController {
             }
 
             if (userService.checkUserAccountExistence(email.getText(), passwordEncrypted)) {
-                textResponse.setText("Authentication succeed");
+                //textResponse.setText("Authentication succeed");
                 User user = userService.findUserByEmail(email.getText());
 
                 InetAddress IP = null;
@@ -82,6 +82,9 @@ public class LogInController {
                 String dateOfConnection = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 
                 connectionInfoDataBaseRepository.saveConnectionInformation(user.getId(), String.valueOf(IP), dateOfConnection, null);
+                email.clear();
+                password.clear();
+
 
                 logInStage.close();
 
